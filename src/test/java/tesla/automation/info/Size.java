@@ -1,4 +1,4 @@
-package info;
+package tesla.automation.info;
 
 public enum Size {
     XS,

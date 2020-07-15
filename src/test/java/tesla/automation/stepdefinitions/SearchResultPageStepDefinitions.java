@@ -1,9 +1,8 @@
-package stepdefinitions;
+package tesla.automation.stepdefinitions;
 
 import io.cucumber.java.en.Then;
-import org.assertj.core.api.Assertions;
 import org.assertj.core.api.SoftAssertions;
-import pageobjects.SearchResultPage;
+import tesla.automation.pageobjects.SearchResultPage;
 
 import static org.assertj.core.api.Assertions.*;
 

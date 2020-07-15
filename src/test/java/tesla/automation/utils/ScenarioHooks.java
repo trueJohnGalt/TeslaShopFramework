@@ -1,4 +1,4 @@
-package stepdefinitions;
+package tesla.automation.utils;
 
 import com.codeborne.selenide.Configuration;
 import io.cucumber.java.Before;

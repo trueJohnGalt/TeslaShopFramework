@@ -1,9 +1,9 @@
-package fragments;
+package tesla.automation.fragments;
 
 import com.codeborne.selenide.SelenideElement;
-import info.ProductInfo;
-import info.ProductInfoBuilder;
-import info.Size;
+import tesla.automation.info.ProductInfo;
+import tesla.automation.info.ProductInfoBuilder;
+import tesla.automation.info.Size;
 
 import java.util.List;
 import java.util.stream.Collectors;

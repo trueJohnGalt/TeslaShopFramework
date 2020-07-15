@@ -1,4 +1,4 @@
-package pageobjects;
+package tesla.automation.pageobjects;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.enabled;

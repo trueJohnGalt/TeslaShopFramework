@@ -1,7 +1,7 @@
-package stepdefinitions;
+package tesla.automation.stepdefinitions;
 
 import io.cucumber.java.en.Given;
-import pageobjects.HomePage;
+import tesla.automation.pageobjects.HomePage;
 
 public class HomePageStepDefinitions {
 

@@ -1,4 +1,4 @@
-package info;
+package tesla.automation.info;
 
 import java.util.List;
 

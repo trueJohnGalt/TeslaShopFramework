@@ -1,6 +1,6 @@
 Feature: Search
 
-  Scenario Outline: Guest searches product from header
+  Scenario Outline: Search query is displayed at the top of page
     When Guest searches <query> from header
     Then <query> is displayed on search result page
 
@@ -8,7 +8,7 @@ Feature: Search
     | query  |
     | hoodie |
 
-  Scenario Outline: Guest searches product from header
+  Scenario Outline: Each search result contains query in name
     When Guest searches <query> from header
     Then each product contains <query> in product name
 

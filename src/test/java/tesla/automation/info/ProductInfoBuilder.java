@@ -24,11 +24,6 @@ public class ProductInfoBuilder {
         return this;
     }
 
-    public ProductInfoBuilder withAvailableSizes(List<Size> sizeList) {
-        info.availableSizes = sizeList;
-        return this;
-    }
-
     public ProductInfo build() {
         return info;
     }

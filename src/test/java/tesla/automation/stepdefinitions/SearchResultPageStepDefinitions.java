@@ -1,6 +1,7 @@
 package tesla.automation.stepdefinitions;
 
 import io.cucumber.java.en.Then;
+import org.apache.commons.lang3.StringUtils;
 import org.assertj.core.api.SoftAssertions;
 import tesla.automation.pageobjects.SearchResultPage;
 
@@ -20,7 +21,7 @@ public class SearchResultPageStepDefinitions {
     @Then("^each product contains ([\\w]+) in product name$")
     public void verifyEachProductContainsQuery(String query) {
         SoftAssertions.assertSoftly(softAssertions -> searchResultPage.getProductNames()
-                .forEach(name -> softAssertions.assertThat(name.contains(query))
+                .forEach(name -> softAssertions.assertThat(StringUtils.containsIgnoreCase(name, query))
                         .withFailMessage("Product name doesn't contain query word")
                         .isTrue()));
 

@@ -3,7 +3,6 @@ package tesla.automation.fragments;
 import com.codeborne.selenide.SelenideElement;
 import tesla.automation.info.ProductInfo;
 import tesla.automation.info.ProductInfoBuilder;
-import tesla.automation.info.Size;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -32,7 +31,6 @@ public class ListingProduct {
         return ProductInfoBuilder.getInstance()
                 .withProductName(getProductNameElement().getText())
                 .withProductPrice(getPriceElement().getText())
-                .withAvailableSizes(getAvailableSizeElements())
                 .build();
     }
 
@@ -58,12 +56,5 @@ public class ListingProduct {
                 .filter(element -> element.getText().equals(size))
                 .findFirst()
                 .orElseThrow(() -> new IllegalArgumentException(format("Size %s wasn't found", size)));
-    }
-
-    private List<Size> getAvailableSizeElements() {
-        return getSizeElements()
-                .stream()
-                .map(size -> Size.valueOf(size.getText()))
-                .collect(Collectors.toList());
     }
 }

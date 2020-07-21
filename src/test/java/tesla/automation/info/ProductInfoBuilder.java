@@ -1,7 +1,5 @@
 package tesla.automation.info;
 
-import java.util.List;
-
 public class ProductInfoBuilder {
 
     private ProductInfo info;

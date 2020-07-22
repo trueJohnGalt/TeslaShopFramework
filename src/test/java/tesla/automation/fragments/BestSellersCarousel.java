@@ -7,6 +7,7 @@ import tesla.automation.info.ArrowType;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
@@ -17,22 +18,25 @@ public class BestSellersCarousel {
     }
 
     public List<String> getVisibleProductNames() {
-        return getCarouselProducts()
+        return getVisibleCarouselProducts()
                 .stream()
-                .filter(SelenideElement::isDisplayed)
                 .map(SelenideElement::getText)
                 .collect(Collectors.toList());
     }
 
-    public void openProductDetailsPageForProduct(int index) {
-        getCarouselProducts().get(index).click();
+    public void openProductByIndex(int index) {
+        getVisibleCarouselProducts().get(index).click();
+    }
+
+    public String getProductNameByIndex(int index) {
+        return getVisibleCarouselProducts().get(index).getText();
     }
 
     private SelenideElement getArrow(ArrowType type) {
         return $(String.format("button[class*='slick-%s']", type.value));
     }
 
-    private ElementsCollection getCarouselProducts() {
-        return $$("#category-endless-carousel div.product-tile__item");
+    private ElementsCollection getVisibleCarouselProducts() {
+        return $$("#category-endless-carousel div.product-tile__item.slick-active");
     }
 }

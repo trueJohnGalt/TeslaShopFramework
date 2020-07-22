@@ -7,7 +7,7 @@ import tesla.automation.pageobjects.SearchResultPage;
 
 import static org.assertj.core.api.Assertions.*;
 
-public class SearchResultPageStepDefinitions {
+public class SearchResultPageStepDefinitions extends CucumberStepDefinitions {
 
     private SearchResultPage searchResultPage = new SearchResultPage();
 

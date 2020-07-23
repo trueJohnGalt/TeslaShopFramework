@@ -9,5 +9,5 @@ import org.junit.runner.RunWith;
         glue = "tesla.automation",
         features = "src/test/java/tesla/automation/features"
 )
-public class CucumberRunner {
+public class CucumberRunTest {
 }

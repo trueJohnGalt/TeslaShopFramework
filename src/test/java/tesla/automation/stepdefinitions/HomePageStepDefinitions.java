@@ -22,7 +22,7 @@ public class HomePageStepDefinitions extends CucumberStepDefinitions {
 
     @Given("^Best Sellers Carousel is displayed on Home Page$")
     public void saveInitialProductsInCarousel() {
-        sessionStorage.storeObject("initialProducts", homePage.getBestSellersCarousel().getVisibleProductNames());
+        storage.saveObject("initialProducts", homePage.getBestSellersCarousel().getVisibleProductNames());
     }
 
     @When("^Guest clicks on ([\\w]+) arrow in Best Sellers Carousel$")
@@ -37,20 +37,20 @@ public class HomePageStepDefinitions extends CucumberStepDefinitions {
         String productName = carousel.getProductNameByIndex(index);
         carousel.openProductByIndex(index);
 
-        sessionStorage.storeObject("productName", productName);
+        storage.saveObject("productName", productName);
     }
 
     @Then("^new products are displayed in Best Sellers Carousel$")
     public void verifyNewProductsAreDisplayedInCarousel() {
         assertThat(homePage.getBestSellersCarousel().getVisibleProductNames())
                 .withFailMessage("New products aren't displayed after click on arrow")
-                .isNotEqualTo(sessionStorage.getListOfObjects("initialProducts", String.class));
+                .isNotEqualTo(storage.getObjects("initialProducts"));
     }
 
     @Then("^initial products are displayed in Best Sellers Carousel$")
     public void verifyInitialProductsAreDisplayedInCarousel() {
         assertThat(homePage.getBestSellersCarousel().getVisibleProductNames())
                 .withFailMessage("Initial products aren't displayed after click on arrow")
-                .isEqualTo(sessionStorage.getListOfObjects("initialProducts", String.class));
+                .isEqualTo(storage.getObjects("initialProducts"));
     }
 }

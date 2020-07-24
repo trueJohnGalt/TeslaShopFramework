@@ -11,9 +11,9 @@ import static com.codeborne.selenide.Selenide.open;
 
 @CucumberContextConfiguration
 @ContextConfiguration(classes = SpringConfig.class)
-public class ScenarioHooks {
+public class Hooks {
 
-    private static Logger log = Logger.getLogger(ScenarioHooks.class);
+    private static Logger log = Logger.getLogger(Hooks.class);
 
     @Before(order = 0)
     public void setReportsFolder() {

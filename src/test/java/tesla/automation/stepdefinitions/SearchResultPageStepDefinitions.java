@@ -35,6 +35,6 @@ public class SearchResultPageStepDefinitions extends CucumberStepDefinitions {
     public void verifySearchErrorMessageDisplayed(String errorType) {
         assertThat(searchResultPage.getSearchErrorMessageText())
                 .withFailMessage("Incorrect error message is displayed")
-                .isEqualTo(EnumUtils.asEnum(SearchErrorMessage.class, errorType).getMessage());
+                .isEqualTo(EnumUtils.toEnum(SearchErrorMessage.class, errorType).getMessage());
     }
 }

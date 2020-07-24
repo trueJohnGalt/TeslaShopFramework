@@ -1,11 +1,10 @@
-package tesla.automation.pageobjects;
+package tesla.automation.pages;
 import com.codeborne.selenide.SelenideElement;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import tesla.automation.fragments.BestSellersCarousel;
-import tesla.automation.utils.SessionStorage;
 
 import static com.codeborne.selenide.Condition.enabled;
 import static com.codeborne.selenide.Selenide.$;

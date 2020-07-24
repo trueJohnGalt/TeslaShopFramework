@@ -1,4 +1,4 @@
-package tesla.automation.pageobjects;
+package tesla.automation.pages;
 
 import com.codeborne.selenide.SelenideElement;
 import org.springframework.beans.factory.annotation.Autowired;

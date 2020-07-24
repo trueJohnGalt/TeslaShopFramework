@@ -3,12 +3,11 @@ package tesla.automation.fragments;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import org.springframework.stereotype.Component;
-import tesla.automation.info.ArrowType;
+import tesla.automation.data.enums.ArrowType;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 

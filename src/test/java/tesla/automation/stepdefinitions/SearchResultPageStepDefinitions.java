@@ -4,8 +4,8 @@ import io.cucumber.java.en.Then;
 import org.apache.commons.lang3.StringUtils;
 import org.assertj.core.api.SoftAssertions;
 import org.springframework.beans.factory.annotation.Autowired;
-import tesla.automation.info.SearchErrorMessage;
-import tesla.automation.pageobjects.SearchResultPage;
+import tesla.automation.data.enums.SearchErrorMessage;
+import tesla.automation.pages.SearchResultPage;
 import tesla.automation.utils.EnumUtils;
 
 import static org.assertj.core.api.Assertions.*;

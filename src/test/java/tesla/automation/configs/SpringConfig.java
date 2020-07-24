@@ -1,4 +1,4 @@
-package tesla.automation.utils;
+package tesla.automation.configs;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

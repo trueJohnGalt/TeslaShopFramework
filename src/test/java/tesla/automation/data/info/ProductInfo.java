@@ -1,4 +1,4 @@
-package tesla.automation.info;
+package tesla.automation.data.info;
 
 public class ProductInfo {
 

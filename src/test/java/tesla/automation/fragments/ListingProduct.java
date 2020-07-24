@@ -1,14 +1,12 @@
 package tesla.automation.fragments;
 
 import com.codeborne.selenide.SelenideElement;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
-import tesla.automation.info.ProductInfo;
-import tesla.automation.info.ProductInfoBuilder;
+import tesla.automation.data.info.ProductInfo;
+import tesla.automation.data.info.ProductInfoBuilder;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static com.codeborne.selenide.Selenide.$;
 import static java.lang.String.format;

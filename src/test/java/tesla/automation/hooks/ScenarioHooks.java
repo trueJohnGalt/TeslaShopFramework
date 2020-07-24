@@ -1,10 +1,11 @@
-package tesla.automation.utils;
+package tesla.automation.hooks;
 
 import com.codeborne.selenide.Configuration;
 import io.cucumber.java.Before;
 import io.cucumber.spring.CucumberContextConfiguration;
 import org.apache.log4j.Logger;
 import org.springframework.test.context.ContextConfiguration;
+import tesla.automation.configs.SpringConfig;
 
 import static com.codeborne.selenide.Selenide.open;
 

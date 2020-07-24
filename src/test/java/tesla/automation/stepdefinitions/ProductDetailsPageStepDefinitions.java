@@ -3,7 +3,7 @@ package tesla.automation.stepdefinitions;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.springframework.beans.factory.annotation.Autowired;
-import tesla.automation.pageobjects.ProductDetailsPage;
+import tesla.automation.pages.ProductDetailsPage;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

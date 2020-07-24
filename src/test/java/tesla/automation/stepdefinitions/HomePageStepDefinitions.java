@@ -5,9 +5,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.springframework.beans.factory.annotation.Autowired;
 import tesla.automation.fragments.BestSellersCarousel;
-import tesla.automation.info.ArrowType;
-import tesla.automation.pageobjects.HomePage;
-import tesla.automation.utils.SessionStorage;
+import tesla.automation.data.enums.ArrowType;
+import tesla.automation.pages.HomePage;
 
 import static org.assertj.core.api.Assertions.*;
 

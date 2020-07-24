@@ -8,10 +8,8 @@ import tesla.automation.fragments.BestSellersCarousel;
 
 import static com.codeborne.selenide.Condition.enabled;
 import static com.codeborne.selenide.Selenide.$;
-import static org.springframework.beans.factory.config.ConfigurableBeanFactory.SCOPE_PROTOTYPE;
 
 @Component
-@Scope(SCOPE_PROTOTYPE)
 public class HomePage {
 
     private static Logger log = Logger.getLogger(HomePage.class);

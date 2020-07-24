@@ -15,6 +15,11 @@ public class ScenarioHooks {
 
     private static Logger log = Logger.getLogger(ScenarioHooks.class);
 
+    @Before(order = 0)
+    public void setReportsFolder() {
+        Configuration.reportsFolder = "target/selenide-reports";
+    }
+
     @Before(order = 1)
     public void maximizeScreen() {
         Configuration.startMaximized = true;

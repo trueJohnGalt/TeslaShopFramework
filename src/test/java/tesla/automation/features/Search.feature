@@ -1,17 +1,21 @@
 Feature: Search
 
-  Scenario Outline: Search query is displayed at the top of page
-    When Guest searches <query> from header
+  Scenario Outline: User performs search with valid query via header
+    When Guest searches <query> via header
     Then <query> is displayed on search result page
+    And each product contains <query> in product name
 
     Examples:
-    | query  |
-    | hoodie |
+      | query  |
+      | hoodie |
 
-  Scenario Outline: Each search result contains query in name
-    When Guest searches <query> from header
-    Then each product contains <query> in product name
+    Scenario Outline: User performs search with invalid query via header
+      When Guest searches <query> via header
+      Then <query> is displayed on search result page
+      And <errorType> search error message is displayed
 
     Examples:
-      | query      |
-      | sweatshirt |
+      | query   | errorType            |
+      | invalid | no results found     |
+      | ab      | enter more characters|
+

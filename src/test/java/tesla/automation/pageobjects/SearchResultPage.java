@@ -23,16 +23,23 @@ public class SearchResultPage {
         return getSearchQueryElement().shouldBe(visible).getText();
     }
 
-    public List<ListingProduct> getProducts() {
-        return fragmentFactory.getFragments(ListingProduct.class, $$("ul.product-tile__list li.product-tile__item"));
-    }
-
     public List<String> getProductNames() {
         return getProducts().stream().map(product -> product.getProductInfo().productName).collect(toList());
     }
 
-    private SelenideElement getSearchQueryElement() {
-        return $(".page h2 span");
+    public String getSearchErrorMessageText() {
+        return getSearchErrorMessageElement().getText();
     }
 
+    private List<ListingProduct> getProducts() {
+        return fragmentFactory.getFragments(ListingProduct.class, $$("li.product-tile__item"));
+    }
+
+    private SelenideElement getSearchQueryElement() {
+        return $(".category__container h2>span");
+    }
+
+    private SelenideElement getSearchErrorMessageElement() {
+        return $("span.product-tile__list");
+    }
 }

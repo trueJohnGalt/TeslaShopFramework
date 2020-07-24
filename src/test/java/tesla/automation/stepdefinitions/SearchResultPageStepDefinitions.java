@@ -4,7 +4,9 @@ import io.cucumber.java.en.Then;
 import org.apache.commons.lang3.StringUtils;
 import org.assertj.core.api.SoftAssertions;
 import org.springframework.beans.factory.annotation.Autowired;
+import tesla.automation.info.SearchErrorMessage;
 import tesla.automation.pageobjects.SearchResultPage;
+import tesla.automation.utils.EnumUtils;
 
 import static org.assertj.core.api.Assertions.*;
 
@@ -27,5 +29,12 @@ public class SearchResultPageStepDefinitions extends CucumberStepDefinitions {
                         .withFailMessage("Product name doesn't contain query word")
                         .isTrue()));
 
+    }
+
+    @Then("^([\\w\\s]+) search error message is displayed$")
+    public void verifySearchErrorMessageDisplayed(String errorType) {
+        assertThat(searchResultPage.getSearchErrorMessageText())
+                .withFailMessage("Incorrect error message is displayed")
+                .isEqualTo(EnumUtils.asEnum(SearchErrorMessage.class, errorType).getMessage());
     }
 }

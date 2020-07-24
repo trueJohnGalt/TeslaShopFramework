@@ -16,7 +16,7 @@ public class HomePageStepDefinitions extends CucumberStepDefinitions {
     @Autowired
     private HomePage homePage;
 
-    @Given("^Guest searches ([\\w]+) from header$")
+    @Given("^Guest searches ([\\w]+) via header$")
     public void searchProductFromHomePage(String query) {
         homePage.searchProduct(query);
     }

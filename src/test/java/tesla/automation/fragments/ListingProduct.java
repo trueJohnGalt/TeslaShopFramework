@@ -1,20 +1,26 @@
 package tesla.automation.fragments;
 
 import com.codeborne.selenide.SelenideElement;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 import tesla.automation.info.ProductInfo;
 import tesla.automation.info.ProductInfoBuilder;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static com.codeborne.selenide.Selenide.$;
 import static java.lang.String.format;
+import static org.springframework.beans.factory.config.ConfigurableBeanFactory.SCOPE_PROTOTYPE;
 
+@Component
 public class ListingProduct {
 
-    private SelenideElement root;
+    private final SelenideElement root;
 
-    public ListingProduct(SelenideElement element) {
-        root = element;
+    public ListingProduct(SelenideElement root) {
+        this.root = root;
     }
 
     public void navigateToPDP() {

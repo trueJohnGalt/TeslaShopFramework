@@ -1,9 +1,11 @@
 package tesla.automation.fragments;
 
 import com.codeborne.selenide.ElementsCollection;
+import org.springframework.stereotype.Component;
 
 import static com.codeborne.selenide.Selenide.$$;
 
+@Component
 public class Cart {
 
     public boolean isCartEmpty() {

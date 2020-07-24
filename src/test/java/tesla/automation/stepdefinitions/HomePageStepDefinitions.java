@@ -3,6 +3,7 @@ package tesla.automation.stepdefinitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.springframework.beans.factory.annotation.Autowired;
 import tesla.automation.fragments.BestSellersCarousel;
 import tesla.automation.info.ArrowType;
 import tesla.automation.pageobjects.HomePage;
@@ -12,7 +13,8 @@ import static org.assertj.core.api.Assertions.*;
 
 public class HomePageStepDefinitions extends CucumberStepDefinitions {
 
-    private HomePage homePage = new HomePage();
+    @Autowired
+    private HomePage homePage;
 
     @Given("^Guest searches ([\\w]+) from header$")
     public void searchProductFromHomePage(String query) {

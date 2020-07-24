@@ -1,8 +1,10 @@
 package tesla.automation.stepdefinitions;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import tesla.automation.utils.SessionStorage;
 
 public class CucumberStepDefinitions {
 
-    protected SessionStorage sessionStorage = new SessionStorage();
+    @Autowired
+    protected SessionStorage sessionStorage;
 }

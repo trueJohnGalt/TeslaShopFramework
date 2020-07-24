@@ -2,11 +2,14 @@ package tesla.automation.utils;
 
 import com.codeborne.selenide.Configuration;
 import io.cucumber.java.Before;
+import io.cucumber.spring.CucumberContextConfiguration;
 import org.apache.log4j.Logger;
-import tesla.automation.pageobjects.HomePage;
+import org.springframework.test.context.ContextConfiguration;
 
 import static com.codeborne.selenide.Selenide.open;
 
+@CucumberContextConfiguration
+@ContextConfiguration(classes = SpringConfig.class)
 public class ScenarioHooks {
 
     private static Logger log = Logger.getLogger(ScenarioHooks.class);

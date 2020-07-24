@@ -2,13 +2,15 @@ package tesla.automation.stepdefinitions;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.springframework.beans.factory.annotation.Autowired;
 import tesla.automation.pageobjects.ProductDetailsPage;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class ProductDetailsPageStepDefinitions extends CucumberStepDefinitions {
 
-    private ProductDetailsPage productDetailsPage = new ProductDetailsPage();
+    @Autowired
+    private ProductDetailsPage productDetailsPage;
 
     @When("^Guest adds product to cart$")
     public void addProductToCart() {

@@ -7,7 +7,8 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         glue = "tesla.automation",
-        features = "src/test/java/tesla/automation/features"
+        features = "src/test/java/tesla/automation/features",
+        plugin = "pretty"
 )
-public class CucumberRunTest {
+public class RunCucumberTest {
 }

@@ -3,13 +3,15 @@ package tesla.automation.stepdefinitions;
 import io.cucumber.java.en.Then;
 import org.apache.commons.lang3.StringUtils;
 import org.assertj.core.api.SoftAssertions;
+import org.springframework.beans.factory.annotation.Autowired;
 import tesla.automation.pageobjects.SearchResultPage;
 
 import static org.assertj.core.api.Assertions.*;
 
 public class SearchResultPageStepDefinitions extends CucumberStepDefinitions {
 
-    private SearchResultPage searchResultPage = new SearchResultPage();
+    @Autowired
+    private SearchResultPage searchResultPage;
 
     @Then("^([\\w]+) is displayed on search result page$")
     public void verifySearchQueryOnSearchResultPage(String query) {

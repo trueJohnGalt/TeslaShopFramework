@@ -15,6 +15,7 @@ import static java.lang.String.format;
 import static org.springframework.beans.factory.config.ConfigurableBeanFactory.SCOPE_PROTOTYPE;
 
 @Component
+@Scope(SCOPE_PROTOTYPE)
 public class ListingProduct {
 
     private final SelenideElement root;

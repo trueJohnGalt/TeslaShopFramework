@@ -4,7 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import tesla.automation.fragments.ListingProduct;
-import tesla.automation.utils.FragmentTransformer;
+import tesla.automation.utils.FragmentFactory;
 
 import java.util.List;
 
@@ -17,7 +17,7 @@ import static java.util.stream.Collectors.toList;
 public class SearchResultPage {
 
     @Autowired
-    private FragmentTransformer fragmentTransformer;
+    private FragmentFactory fragmentFactory;
 
     public String getSearchQueryFromSearchResultPage() {
         return getSearchQueryElement().shouldBe(visible).getText();
@@ -32,7 +32,7 @@ public class SearchResultPage {
     }
 
     private List<ListingProduct> getProducts() {
-        return fragmentTransformer.getFragments(ListingProduct.class, $$("li.product-tile__item"));
+        return fragmentFactory.getFragments(ListingProduct.class, $$("li.product-tile__item"));
     }
 
     private SelenideElement getSearchQueryElement() {

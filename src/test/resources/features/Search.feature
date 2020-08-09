@@ -1,7 +1,7 @@
 Feature: Search
 
   Scenario Outline: User performs search with valid query via header
-    When Guest searches <query> via header
+    When Guest searches <query> from header
     Then <query> is displayed on search result page
     And each product contains <query> in product name
 
@@ -10,7 +10,7 @@ Feature: Search
       | hoodie |
 
     Scenario Outline: User performs search with invalid query via header
-      When Guest searches <query> via header
+      When Guest searches <query> from header
       Then <query> is displayed on search result page
       And <errorType> search error message is displayed
 

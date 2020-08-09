@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 @Component
-public class Storage {
+public class StorageSession {
 
     private static final Map<String, Object> storage = new HashMap<>();
 

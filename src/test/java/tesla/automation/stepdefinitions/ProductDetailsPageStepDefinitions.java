@@ -24,7 +24,7 @@ public class ProductDetailsPageStepDefinitions extends CucumberStepDefinitions {
 
     @Then("^product details page with correct product name is opened$")
     public void verifyProductNameOnPDP() {
-        String expectedName = storage.getObject("productName", String.class);
+        String expectedName = storageSession.getObject("productName", String.class);
         String actualName = productDetailsPage.getProductName();
 
         assertThat(expectedName.equalsIgnoreCase(actualName))

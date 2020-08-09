@@ -10,12 +10,12 @@ import java.util.List;
 import static java.util.stream.Collectors.toList;
 
 @Component
-public class FragmentTransformer {
+public class FragmentFactory {
 
     private final ApplicationContext context;
 
     @Autowired
-    public FragmentTransformer(ApplicationContext context) {
+    public FragmentFactory(ApplicationContext context) {
         this.context = context;
     }
 

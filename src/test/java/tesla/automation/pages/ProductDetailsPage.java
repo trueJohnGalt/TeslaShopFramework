@@ -47,13 +47,13 @@ public class ProductDetailsPage {
     private SelenideElement getSizeElement(String size) {
         return getAvailableSizeElements()
             .stream()
-            .filter(element -> element.getText().equals(size))
+            .filter(element -> element.getValue().equals(size))
             .findFirst()
             .orElseThrow(() -> new IllegalArgumentException("Selected size is out of stock"));
     }
 
     private ElementsCollection getAvailableSizeElements() {
-        return $$("div.desktop-view div.active section.product-size li")
+        return $$("div.desktop-view div.active fieldset.product-size input")
                 .excludeWith(attribute("class", "outOfStock"));
     }
 

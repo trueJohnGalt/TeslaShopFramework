@@ -56,7 +56,7 @@ public class Header {
     }
 
     private SelenideElement getCartIcon() {
-        return $("label.nav-cart");
+        return $("div.nav-cart");
     }
 
     private SelenideElement getTeslaLogo() {
@@ -72,7 +72,7 @@ public class Header {
     }
 
     private SelenideElement getSubcategoryElement(String subcategoryName) {
-        return $$("h4.sub-nav-title").findBy(text(subcategoryName)).$("a");
+        return $$("p.sub-nav-title").findBy(text(subcategoryName)).$("a");
     }
 
     private SelenideElement getSignInButton() {
